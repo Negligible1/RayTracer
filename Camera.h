@@ -10,9 +10,11 @@ public:
 	Camera();
 	~Camera();
 
-	Ray ReturnRay(int x, int y);
+	Ray ReturnRay(int x, int y, int height, int width);
 
 private:
+	glm::mat4 ViewMatrix;
+	glm::mat4 ProjMatrix;
 
 };
 
